@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Goclinic.Goclinic.Business.Models.Agenda>
+
+
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<table class="table-responsive">
+    <thead>
+        <tr>
+            <th>
+                Data atendimento
+            </th>
+            <th>
+                Tempo Atendimento
+            </th>
+            <th>
+                Observações
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (var agenda in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => agenda.DataHoraAtendimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => agenda.TempoAtendimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => agenda.observacoes)
+                    </td>
+                    <td>
+                        <a onclick="ExibirModal(@agenda.IdPaciente)" class="btn-small red darken-2">Cancelar Atendimento</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td>
+                    <a>Nenhum agendamento marcado. </a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+@if (Model != null)
+{
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Cancelar Consulta</h4>
+            <p>Deseja prosseguir com o cancelamento do atendimento ? </p>
+        </div>
+        <div class="modal-footer">
+            <a class="modal-close btn green accent-4">Não</a>
+            <a class="modal-close btn red accent-4 btnConfirmar">Sim</a>
+        </div>
+    </div>
+
+}
+    @section Scripts
+    {
+        <script>
+            $(document).ready(function () {
+                $(".modal").modal();
+            })
+            function ExibirModal(id) {
+                $("#modal1").modal("open");
+                $(".btnConfirmar").on('click', function () {
+                    $.ajax({
+                        method: "POST",
+                        url: "/Agenda/CancelarAtendimento",
+                        data: { id: id },
+                        success: function () {
+                            location.reload();
+                        }
+                    });
+                });
+            }
+        </script>
+    }
