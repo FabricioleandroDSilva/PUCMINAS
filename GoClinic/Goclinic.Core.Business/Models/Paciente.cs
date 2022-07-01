@@ -15,6 +15,7 @@ namespace Goclinic.Core.Business
 
         [Required]
         [StringLength(11, ErrorMessage = "O campo {0} é obrigatório")]
+
         public string Cpf { get; set; }
 
 
@@ -24,7 +25,8 @@ namespace Goclinic.Core.Business
 
         [Required]
         [Display(Name = "Data de nascimento")]
-        [DisplayFormat(DataFormatString = "mm/dd/yyyy")]
+        
+        [DataType(DataType.Date)]
         public DateTime DataNascimento { get; set; }
 
         [Required]

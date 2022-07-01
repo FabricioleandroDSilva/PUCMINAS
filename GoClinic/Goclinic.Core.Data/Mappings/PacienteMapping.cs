@@ -46,6 +46,7 @@ namespace Goclinic.Agendamento.Data.Mappings
             builder.Property(p => p.Estado)
             .IsRequired(true);
 
+            builder.ToTable("Paciente");
         }
     }
 }

@@ -9,7 +9,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goclinic.Agendamento.Core.D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoClinic.Agendamento.Core.Api", "GoClinic.Core.Api\GoClinic.Agendamento.Core.Api.csproj", "{8B23204B-1EB0-45D5-AACF-EDBB66D624B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoClinic.Agendamento.Core.UI", "GoClinic.Agendamento.Core.UI\GoClinic.Agendamento.Core.UI.csproj", "{BD3667C6-B151-4E5C-80B2-A192A1DCD88B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoClinic.Agendamento.Core.UI", "GoClinic.Agendamento.Core.UI\GoClinic.Agendamento.Core.UI.csproj", "{BD3667C6-B151-4E5C-80B2-A192A1DCD88B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModuloPaciente", "ModuloPaciente", "{26D39E34-4E70-4A2F-8F99-381DB0F7D4BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModuloMedico", "ModuloMedico", "{9FD1E4F2-2278-493D-A235-30411969628A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goclinic.AgendaMedica.Core.Api", "Goclinic.AgendaMedica.Core.Api\Goclinic.AgendaMedica.Core.Api.csproj", "{3CD536BB-D1E7-425B-BB79-CA4310370D07}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goclinic.AgendaMedica.Core.Data", "Goclinic.AgendaMedica.Core.Data\Goclinic.AgendaMedica.Core.Data.csproj", "{20B4B567-CD97-4BAB-A061-1F0EF8470A0B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goclinic.AgendaMedica.Core.Business", "Goclinic.AgendaMedica.Core.Business\Goclinic.AgendaMedica.Core.Business.csproj", "{502F8A25-38F5-4893-B727-56A54F387AC0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goclinic.AgendaMedica.Core.UI", "Goclinic.AgendaMedica.Core.UI\Goclinic.AgendaMedica.Core.UI.csproj", "{D4E22E12-B967-4E5A-8AC6-98D80FBBE28A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoClinicApiGateway", "GoClinicApiGateway\GoClinicApiGateway.csproj", "{C5CCA435-FE8A-4D7A-877C-F397A6216025}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +47,39 @@ Global
 		{BD3667C6-B151-4E5C-80B2-A192A1DCD88B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD3667C6-B151-4E5C-80B2-A192A1DCD88B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD3667C6-B151-4E5C-80B2-A192A1DCD88B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CD536BB-D1E7-425B-BB79-CA4310370D07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CD536BB-D1E7-425B-BB79-CA4310370D07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CD536BB-D1E7-425B-BB79-CA4310370D07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CD536BB-D1E7-425B-BB79-CA4310370D07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20B4B567-CD97-4BAB-A061-1F0EF8470A0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20B4B567-CD97-4BAB-A061-1F0EF8470A0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20B4B567-CD97-4BAB-A061-1F0EF8470A0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20B4B567-CD97-4BAB-A061-1F0EF8470A0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{502F8A25-38F5-4893-B727-56A54F387AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{502F8A25-38F5-4893-B727-56A54F387AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{502F8A25-38F5-4893-B727-56A54F387AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{502F8A25-38F5-4893-B727-56A54F387AC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4E22E12-B967-4E5A-8AC6-98D80FBBE28A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4E22E12-B967-4E5A-8AC6-98D80FBBE28A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4E22E12-B967-4E5A-8AC6-98D80FBBE28A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4E22E12-B967-4E5A-8AC6-98D80FBBE28A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5CCA435-FE8A-4D7A-877C-F397A6216025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5CCA435-FE8A-4D7A-877C-F397A6216025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5CCA435-FE8A-4D7A-877C-F397A6216025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5CCA435-FE8A-4D7A-877C-F397A6216025}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{885C03C6-A8EB-4FBD-89C5-E249161EFCBB} = {26D39E34-4E70-4A2F-8F99-381DB0F7D4BB}
+		{F2D7E0EC-8B16-4496-8A2C-C045BEAD285C} = {26D39E34-4E70-4A2F-8F99-381DB0F7D4BB}
+		{8B23204B-1EB0-45D5-AACF-EDBB66D624B0} = {26D39E34-4E70-4A2F-8F99-381DB0F7D4BB}
+		{BD3667C6-B151-4E5C-80B2-A192A1DCD88B} = {26D39E34-4E70-4A2F-8F99-381DB0F7D4BB}
+		{3CD536BB-D1E7-425B-BB79-CA4310370D07} = {9FD1E4F2-2278-493D-A235-30411969628A}
+		{20B4B567-CD97-4BAB-A061-1F0EF8470A0B} = {9FD1E4F2-2278-493D-A235-30411969628A}
+		{502F8A25-38F5-4893-B727-56A54F387AC0} = {9FD1E4F2-2278-493D-A235-30411969628A}
+		{D4E22E12-B967-4E5A-8AC6-98D80FBBE28A} = {9FD1E4F2-2278-493D-A235-30411969628A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6D9CFB71-C33D-487E-AE41-EF6480BBCC4A}

@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/goclinicpucminasdatabase/databases/GoclinicaPucMinasSql",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:goclinicpucminasdatabase.database.windows.net",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

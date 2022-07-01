@@ -1,0 +1,31 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44339
+        }
+      ],
+      "UpstreamPathTemplate": "ModuloMedico/Goclinic.AgendaMedica.Core.Api/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44377
+        }
+      ],
+      "UpstreamPathTemplate": "ModuloPaciente/GoClinic.Agendamento.Core.Api/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    }
+  ],
+
+  "GlobalConfiguration": {
+  }
+}
