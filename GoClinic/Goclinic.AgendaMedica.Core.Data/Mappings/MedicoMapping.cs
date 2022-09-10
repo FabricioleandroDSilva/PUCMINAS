@@ -49,6 +49,10 @@ namespace Goclinic.AgendaMedica.Core.Data.Mappings
             builder.Property(p => p.Estado)
             .IsRequired(true);
 
+             builder.Property(p => p.LoginId)
+            .IsRequired(true);
+
+
             builder.ToTable("Medico");
         }
     }

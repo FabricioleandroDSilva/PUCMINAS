@@ -17,17 +17,18 @@ namespace Goclinic.AgendaMedica.Core.Api.Controllers
     public class MedicoController : Controller
     {
         /// <summary>
-        /// Api módulo de agendamento de pacientes
+        /// Api módulo de agendamento medico
         /// </summary>
         /// <returns></returns>
         private readonly IMedicoRepository _medico;
         private readonly IUsuarioRepository _usuario;
+       // private readonly IRepository<Agenda> _agenda;
 
-        public MedicoController(IMedicoRepository medico, IUsuarioRepository usuario)
+        public MedicoController(IMedicoRepository medico, IUsuarioRepository usuario)//, IRepository<Agenda>  agenda)
         {
             _medico = medico;
             _usuario = usuario;
-
+            //_agenda = agenda;
 
         }
 
@@ -111,11 +112,11 @@ namespace Goclinic.AgendaMedica.Core.Api.Controllers
         }
 
         [HttpPost("AdicionarAgenda")]
-        public async Task<ActionResult<Medico>> AdicionarAgenda(Medico pacientes)
+        public async Task<ActionResult<Medico>> AdicionarAgenda(AgendaMedicas agendaMedica)
         {
             try
             {
-                // await _medico.Adicionar(pacientes);
+              //  await _agenda.Adicionar(agendaMedica);
                 return Ok();
 
             }

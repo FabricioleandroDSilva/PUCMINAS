@@ -14,6 +14,8 @@ namespace Goclinic.AgendaMedica.Core.Business.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+
+
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         public string Nome { get; set; }
 
@@ -58,5 +60,7 @@ namespace Goclinic.AgendaMedica.Core.Business.Models
         [Required]
         [StringLength(15, ErrorMessage = "O campo {0} é obrigatório")]
         public string Estado { get; set; }
+
+        public int LoginId { get; set; }
     }
 }

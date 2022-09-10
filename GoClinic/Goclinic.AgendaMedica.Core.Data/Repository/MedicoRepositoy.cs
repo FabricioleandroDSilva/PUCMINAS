@@ -11,5 +11,7 @@ namespace Goclinic.AgendaMedica.Core.Data.Repository
     public class MedicoRepositoy : Repository<Medico>, IMedicoRepository
     {
         public MedicoRepositoy(Contexto context) : base(context) { }
+
+    
     }
 }

@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace Goclinic.AgendaMedica.Core.Business.Interfaces
 {
-   public interface IMedicoRepository : IRepository<Medico>
+    public interface IMedicoRepository : IRepository<Medico>
     {
+       
     }
 }

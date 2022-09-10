@@ -12,7 +12,9 @@ namespace Goclinic.AgendaMedica.Core.Data
         }
 
         public DbSet<Medico> Medicos { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
 
+        public DbSet<Agenda> Agendas { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new MedicoMapping());
