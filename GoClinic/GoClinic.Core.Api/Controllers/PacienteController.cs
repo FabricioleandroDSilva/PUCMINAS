@@ -36,7 +36,6 @@ namespace GoClinic.Core.Api.Controllers
 
 
         }
-
         
         [HttpPost("Login")]
         [AllowAnonymous]
@@ -78,24 +77,7 @@ namespace GoClinic.Core.Api.Controllers
             }
         }
 
-        [HttpPost("AdicionarLogin")]
-        [AllowAnonymous]
-
-        public async Task<ActionResult<Usuario>> AdicionarLogin(Usuario usuarios)
-        {
-            try
-            {
-                await _usuario.Adicionar(usuarios);
-                return Ok(usuarios);
-            }
-            catch (Exception ex)
-            {
-                return Ok(ex.Message);
-            }
-        }
-
         [HttpPost("AdicionarPaciente")]
-
         public async Task<ActionResult<Paciente>> AdicionarPaciente(Paciente pacientes)
         {
             try
@@ -114,39 +96,6 @@ namespace GoClinic.Core.Api.Controllers
                 return Ok(ex.Message);
             }
 
-        }
-
-        [HttpPost("AdicionarAgendamento")]
-        public async Task<ActionResult<Paciente>> AdicionarAgendamento(Paciente pacientes)
-        {
-            try
-            {
-               // await _paciente.Adicionar(pacientes);
-                return Ok();
-
-            }
-            catch (Exception ex)
-            {
-
-            }
-            return Ok();
-        }
-
-        [HttpGet("ListarAtendimento")]
-        public async Task<ActionResult<Paciente>> ListarAtendimento(string cpf)
-        {
-            try
-            {
-                // await _paciente.Adicionar(pacientes);
-                return Ok();
-
-            }
-            catch (Exception ex)
-            {
-
-            }
-            return Ok();
-        }
-
+        }  
     }
 }

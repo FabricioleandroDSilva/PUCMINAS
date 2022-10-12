@@ -30,8 +30,7 @@ namespace Goclinic.AgendaMedica.Core.Api
             services.AddDbContext<Contexto>();
             services.AddScoped<IMedicoRepository, MedicoRepositoy>();
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
-            //services.AddScoped<IRepository<Agenda>, Repository<Agenda>();
-
+         
             services.AddControllers();
 
             services.AddCors();

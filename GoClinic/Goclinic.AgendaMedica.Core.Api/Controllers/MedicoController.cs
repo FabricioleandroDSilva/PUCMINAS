@@ -22,13 +22,10 @@ namespace Goclinic.AgendaMedica.Core.Api.Controllers
         /// <returns></returns>
         private readonly IMedicoRepository _medico;
         private readonly IUsuarioRepository _usuario;
-       // private readonly IRepository<Agenda> _agenda;
-
-        public MedicoController(IMedicoRepository medico, IUsuarioRepository usuario)//, IRepository<Agenda>  agenda)
+        public MedicoController(IMedicoRepository medico, IUsuarioRepository usuario)
         {
             _medico = medico;
             _usuario = usuario;
-            //_agenda = agenda;
 
         }
 
@@ -72,23 +69,6 @@ namespace Goclinic.AgendaMedica.Core.Api.Controllers
                 return Ok(ex.Message);
             }
         }
-
-        [HttpPost("AdicionarLogin")]
-        [AllowAnonymous]
-
-        public async Task<ActionResult<Usuario>> AdicionarLogin(Usuario usuarios)
-        {
-            try
-            {
-                await _usuario.Adicionar(usuarios);
-                return Ok(usuarios);
-            }
-            catch (Exception ex)
-            {
-                return Ok(ex.Message);
-            }
-        }
-
         [HttpPost("AdicionarMedico")]
 
         public async Task<ActionResult<Medico>> AdicionarMedico(Medico Medicos)
@@ -109,38 +89,6 @@ namespace Goclinic.AgendaMedica.Core.Api.Controllers
                 return Ok(ex.Message);
             }
 
-        }
-
-        [HttpPost("AdicionarAgenda")]
-        public async Task<ActionResult<Medico>> AdicionarAgenda(AgendaMedicas agendaMedica)
-        {
-            try
-            {
-              //  await _agenda.Adicionar(agendaMedica);
-                return Ok();
-
-            }
-            catch (Exception ex)
-            {
-
-            }
-            return Ok();
-        }
-
-        [HttpGet("ListarAtendimentos")]
-        public async Task<ActionResult<Medico>> ListarAtendimentos(string Crm)
-        {
-            try
-            {
-                // await _medico.Adicionar(pacientes);
-                return Ok();
-
-            }
-            catch (Exception ex)
-            {
-
-            }
-            return Ok();
         }
     }
 }
