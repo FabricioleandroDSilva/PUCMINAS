@@ -70,18 +70,15 @@ namespace Goclinic.AgendaMedica.Core.Api.Controllers
             }
         }
         [HttpPost("AdicionarMedico")]
-
+        [AllowAnonymous]
         public async Task<ActionResult<Medico>> AdicionarMedico(Medico Medicos)
         {
             try
             {
-                if (User.Identity.IsAuthenticated)
-                {
-                    await _medico.Adicionar(Medicos);
-                    return Ok(Medicos);
-                }
-                return Ok("Usuário não autenticado.");
-
+              
+                await _medico.Adicionar(Medicos);
+                return Ok(Medicos);
+                
 
             }
             catch (Exception ex)

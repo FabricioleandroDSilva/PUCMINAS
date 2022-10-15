@@ -78,16 +78,15 @@ namespace GoClinic.Core.Api.Controllers
         }
 
         [HttpPost("AdicionarPaciente")]
+        [AllowAnonymous]
         public async Task<ActionResult<Paciente>> AdicionarPaciente(Paciente pacientes)
         {
             try
             {
-                if (User.Identity.IsAuthenticated)
-                {
-                    await _paciente.Adicionar(pacientes);
-                    return Ok(pacientes);
-                }
-                return Ok("Usuário não autenticado.");
+              
+                await _paciente.Adicionar(pacientes);
+                return Ok(pacientes);
+
 
 
             }
